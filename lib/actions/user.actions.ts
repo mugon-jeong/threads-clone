@@ -59,7 +59,7 @@ export async function updateUser({
   }
 }
 
-export async function fetchUserPosts(userId: string) {
+export async function fetchUserThreads(userId: string) {
   try {
     connectToDB();
 
