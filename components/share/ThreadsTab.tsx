@@ -1,7 +1,7 @@
 import React from "react";
-import { fetchUserThreads } from "@/lib/actions/user.action";
+import { fetchUserThreads } from "@/lib/actions/user.actions";
 import { redirect } from "next/navigation";
-import ThreadCard from "@/components/cards/THreadCard";
+import ThreadCard from "@/components/cards/ThreadCard";
 interface Result {
   name: string;
   image: string;

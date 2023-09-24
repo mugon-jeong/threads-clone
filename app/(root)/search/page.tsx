@@ -1,6 +1,6 @@
 import React from "react";
 import { currentUser } from "@clerk/nextjs";
-import { fetchUser, fetchUsers, fetchUserThreads } from "@/lib/actions/user.action";
+import { fetchUser, fetchUsers, fetchUserThreads } from "@/lib/actions/user.actions";
 import { redirect } from "next/navigation";
 import UserCard from "@/components/cards/UserCard";
 

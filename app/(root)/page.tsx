@@ -1,7 +1,7 @@
 import { currentUser, UserButton } from "@clerk/nextjs";
-import { fetchThreds } from "@/lib/actions/thread.action";
-import ThreadCard from "@/components/cards/THreadCard";
-import { fetchUser } from "@/lib/actions/user.action";
+import { fetchThreads } from "@/lib/actions/thread.actions";
+import ThreadCard from "@/components/cards/ThreadCard";
+import { fetchUser } from "@/lib/actions/user.actions";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
@@ -10,7 +10,7 @@ export default async function Home() {
   const userInfo = await fetchUser(user.id);
   if (!userInfo?.onboarded) redirect("/onboarding");
 
-  const result = await fetchThreds(1, 30);
+  const result = await fetchThreads(1, 30);
 
   return (
     <>

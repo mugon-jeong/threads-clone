@@ -9,7 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel } from "@/components/
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { addCommentToThread } from "@/lib/actions/thread.action";
+import { addCommentToThread } from "@/lib/actions/thread.actions";
 interface Props {
   threadId: string;
   currentUserImg: string;
