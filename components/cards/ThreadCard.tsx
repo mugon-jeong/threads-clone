@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { formatDateString } from "@/lib/utils";
+import DeleteThread from "@/components/forms/DeleteThread";
 interface Props {
   id: string;
   currentUserId: string;
@@ -108,13 +109,13 @@ const ThreadCard = ({
           </div>
         </div>
 
-        {/*<DeleteThread*/}
-        {/*    threadId={JSON.stringify(id)}*/}
-        {/*    currentUserId={currentUserId}*/}
-        {/*    authorId={author.id}*/}
-        {/*    parentId={parentId}*/}
-        {/*    isComment={isComment}*/}
-        {/*/>*/}
+        <DeleteThread
+          threadId={JSON.stringify(id)}
+          currentUserId={currentUserId}
+          authorId={author.id}
+          parentId={parentId}
+          isComment={isComment}
+        />
       </div>
 
       {!isComment && comments.length > 0 && (

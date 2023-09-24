@@ -127,7 +127,6 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   onChange={(e) => handleImage(e, field.onChange)}
                 />
               </FormControl>
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -174,8 +173,8 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
           )}
         />
 
-        <Button type="submit" className={"bg-primary-500"}>
-          Submit
+        <Button type="submit" className="bg-primary-500">
+          {btnTitle}
         </Button>
       </form>
     </Form>
